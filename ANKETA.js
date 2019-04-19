@@ -17,6 +17,7 @@ function entage(){
 var gender;
 var pensia;
 var pens_confirm;
+
 entGender();
 function entGender() {
 	gender=confirm("Ваш пол - мужской?");
@@ -30,6 +31,18 @@ function entGender() {
 		gender="мужской";
 	} else{
 		gender="женский";
+
+
 	}
-	alert("ваше ФИО: "+surname+ " "+name+" "+otchestvo+"\n ваш возраст в годах: " +age+"\n ваш возраст в днях: "+ageDays+"\nчерез 5 лет вам будет: "+age5years+ "\nваш пол: " +gender+"\nвы на пенсии: " + pensia_confirm );
+	var userObj = {};
+	userObj.name = name;
+	userObj.surname = surname;
+	userObj.otchestvo = otchestvo;
+	userObj.age = age;
+	userObj.ageDays = ageDays;
+	userObj.age5years = age5years;
+	userObj.gender = gender;
+	userObj.pensia_confirm = pensia_confirm;
+
+	alert("ваше ФИО: "+userObj.surname+ " "+userObj.name+" "+userObj.otchestvo+"\n ваш возраст в годах: " +userObj.age+"\n ваш возраст в днях: "+userObj.ageDays+"\nчерез 5 лет вам будет: "+userObj.age5years+ "\nваш пол: " +userObj.gender+"\nвы на пенсии: " + userObj.pensia_confirm );
 }
